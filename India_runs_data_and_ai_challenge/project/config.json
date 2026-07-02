@@ -1,0 +1,240 @@
+{
+  "paths": {
+    "candidates_file": "../candidates.jsonl",
+    "schema_file": "../candidate_schema.json",
+    "output_file": "output/submission.csv"
+  },
+  "component_weights": {
+    "resume": 0.35,
+    "experience": 0.25,
+    "education": 0.10,
+    "behavioral": 0.30
+  },
+  "skill_weights": {
+    "machine learning": 1.0,
+    "deep learning": 1.0,
+    "python": 0.9,
+    "pytorch": 0.95,
+    "tensorflow": 0.9,
+    "llm": 1.0,
+    "llms": 1.0,
+    "large language model": 1.0,
+    "fine-tuning llms": 1.0,
+    "rag": 1.0,
+    "retrieval": 0.85,
+    "embeddings": 0.9,
+    "vector database": 0.9,
+    "vector databases": 0.9,
+    "milvus": 0.85,
+    "pinecone": 0.85,
+    "weaviate": 0.85,
+    "nlp": 0.85,
+    "natural language processing": 0.85,
+    "fastapi": 0.75,
+    "flask": 0.65,
+    "docker": 0.7,
+    "kubernetes": 0.75,
+    "sql": 0.6,
+    "git": 0.4,
+    "aws": 0.65,
+    "gcp": 0.65,
+    "azure": 0.65,
+    "langchain": 0.9,
+    "hugging face": 0.85,
+    "transformers": 0.9,
+    "scikit-learn": 0.7,
+    "mlops": 0.8,
+    "airflow": 0.55,
+    "spark": 0.5,
+    "computer vision": 0.75,
+    "reinforcement learning": 0.8
+  },
+  "skill_synonyms": {
+    "llms": "llm",
+    "natural language processing": "nlp",
+    "vector databases": "vector database",
+    "huggingface": "hugging face",
+    "torch": "pytorch"
+  },
+  "proficiency_multipliers": {
+    "beginner": 0.4,
+    "intermediate": 0.7,
+    "advanced": 0.9,
+    "expert": 1.0
+  },
+  "proficiency_rank": {
+    "beginner": 0,
+    "intermediate": 1,
+    "advanced": 2,
+    "expert": 3
+  },
+  "ai_title_keywords": [
+    "ai engineer",
+    "ml engineer",
+    "machine learning engineer",
+    "data scientist",
+    "research scientist",
+    "applied scientist",
+    "nlp engineer",
+    "deep learning",
+    "artificial intelligence"
+  ],
+  "irrelevant_title_keywords": [
+    "hr manager",
+    "graphic designer",
+    "content writer",
+    "marketing manager",
+    "sales executive",
+    "accountant",
+    "civil engineer",
+    "mechanical engineer",
+    "customer support",
+    "operations manager"
+  ],
+  "education_field_scores": {
+    "computer science": 1.0,
+    "artificial intelligence": 1.0,
+    "machine learning": 1.0,
+    "data science": 0.95,
+    "software engineering": 0.9,
+    "information technology": 0.75,
+    "electronics": 0.6,
+    "mathematics": 0.7,
+    "statistics": 0.8
+  },
+  "degree_level_scores": {
+    "ph.d": 1.0,
+    "phd": 1.0,
+    "doctorate": 1.0,
+    "m.tech": 0.9,
+    "m.s": 0.9,
+    "m.sc": 0.9,
+    "mba": 0.5,
+    "m.e": 0.85,
+    "b.tech": 0.75,
+    "b.e": 0.75,
+    "b.s": 0.75,
+    "b.sc": 0.7
+  },
+  "education_scoring": {
+    "field_weight": 0.7,
+    "degree_weight": 0.3,
+    "missing_education_score": 0.2
+  },
+  "behavioral_weights": {
+    "profile_completeness_score": 0.06,
+    "signup_tenure": 0.02,
+    "activity_recency": 0.08,
+    "open_to_work_flag": 0.03,
+    "profile_views_received_30d": 0.04,
+    "applications_submitted_30d": 0.02,
+    "recruiter_response_rate": 0.10,
+    "avg_response_time_hours": 0.05,
+    "skill_assessment_scores": 0.10,
+    "connection_count": 0.03,
+    "endorsements_received": 0.03,
+    "notice_period_days": 0.02,
+    "expected_salary_range_inr_lpa": 0.02,
+    "preferred_work_mode": 0.02,
+    "willing_to_relocate": 0.01,
+    "github_activity_score": 0.06,
+    "search_appearance_30d": 0.05,
+    "saved_by_recruiters_30d": 0.06,
+    "interview_completion_rate": 0.10,
+    "offer_acceptance_rate": 0.04,
+    "verified_email": 0.02,
+    "verified_phone": 0.02,
+    "linkedin_connected": 0.02
+  },
+  "behavioral_normalization": {
+    "profile_completeness_score": {"low": 40.0, "high": 100.0},
+    "signup_tenure_days": {"low": 30.0, "high": 730.0},
+    "activity_recency_days": {"low": 0.0, "high": 180.0, "invert": true},
+    "profile_views_received_30d": {"low": 0.0, "high": 50.0},
+    "applications_submitted_30d": {"low": 0.0, "high": 10.0},
+    "avg_response_time_hours": {"low": 1.0, "high": 168.0, "invert": true},
+    "connection_count": {"low": 0.0, "high": 500.0},
+    "endorsements_received": {"low": 0.0, "high": 100.0},
+    "notice_period_days": {"low": 0.0, "high": 90.0, "invert": true},
+    "expected_salary_mid_lpa": {"low": 10.0, "high": 60.0},
+    "github_activity_score": {"low": 0.0, "high": 100.0, "missing_value": 0.3},
+    "search_appearance_30d": {"low": 0.0, "high": 300.0},
+    "saved_by_recruiters_30d": {"low": 0.0, "high": 15.0},
+    "skill_assessment_scores": {"low": 0.0, "high": 100.0},
+    "offer_acceptance_rate": {"low": 0.0, "high": 1.0, "missing_value": 0.5}
+  },
+  "preferred_work_mode_scores": {
+    "remote": 1.0,
+    "hybrid": 0.9,
+    "flexible": 0.85,
+    "onsite": 0.7
+  },
+  "resume_scoring": {
+    "skill_sum_weight": 0.55,
+    "coverage_weight": 0.25,
+    "title_relevant_bonus": 0.15,
+    "title_irrelevant_penalty": 0.20,
+    "profile_keyword_bonus": 0.08,
+    "certification_bonus": 0.05,
+    "certification_cap": 3,
+    "skill_sum_high": 12.0,
+    "skill_count_high": 10.0,
+    "endorsement_divisor": 50.0,
+    "endorsement_cap": 0.2,
+    "duration_divisor": 60.0,
+    "duration_cap": 0.15
+  },
+  "experience_scoring": {
+    "years_weight": 0.35,
+    "ai_years_weight": 0.35,
+    "continuity_weight": 0.15,
+    "relevance_weight": 0.15,
+    "ai_years_low": 1.0,
+    "gap_months_high": 24.0,
+    "gap_continuity_min": 0.4,
+    "default_relevance": 0.5,
+    "irrelevant_relevance": 0.2,
+    "skills_relevance": 0.65,
+    "skills_relevance_min_count": 3
+  },
+  "penalties": {
+    "timeline_inconsistency": 0.25,
+    "yoe_mismatch": 0.15,
+    "keyword_stuffing": 0.20,
+    "contradictory_title": 0.18,
+    "missing_essential": 0.12,
+    "inactive_profile": 0.10,
+    "low_response_rate": 0.08
+  },
+  "penalty_thresholds": {
+    "yoe_mismatch_years": 2.0,
+    "keyword_stuffing_min_ai_skills": 8,
+    "keyword_stuffing_min_beginner": 5,
+    "beginner_max_endorsements": 2,
+    "beginner_max_duration_months": 6,
+    "contradictory_title_min_ai_skills": 6,
+    "inactive_days": 120,
+    "low_response_rate": 0.1,
+    "keyword_density_threshold": 0.08,
+    "keyword_density_min_ai_skills": 7,
+    "keyword_stuffing_partial_multiplier": 0.5,
+    "max_total_penalty": 0.75,
+    "default_inactive_days": 365
+  },
+  "feature_extraction": {
+    "reference_date": "2026-06-01"
+  },
+  "experience": {
+    "optimal_years": 8.0,
+    "max_years_cap": 20.0,
+    "min_relevant_years": 3.0
+  },
+  "normalization": {
+    "min_score": 0.0,
+    "max_score": 1.0
+  },
+  "reasoning": {
+    "max_length": 200
+  },
+  "top_n": 100
+}
